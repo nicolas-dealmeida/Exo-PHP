@@ -33,14 +33,14 @@ $EXO = 'Exo6';
             <h1 class="TC"><?php echo "$EXO" ?></h1>
         </div>
         <div class="Div1">
-            <form class="Jaune" action="" method="GET">
+            <form class="Violet" action="" method="GET">
                 Texte : <input type="text" name="Texte">
                 <input type="submit">
             </form>
                 <?php
                     if(isset($_GET['Texte'])){
                         $Texte = $_GET['Texte'];
-                        echo '</div><div class="Div1"><p>Le texte écrit est : '.$Texte.'</p>';
+                        echo '</div><div class="Div1"><p>Le texte écrit est : <span class=Violet>'.$Texte.'</span></p>';
                     }
                 ?>
         </div>
