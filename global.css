@@ -1,0 +1,124 @@
+
+/*          CSS HTML et BODY            */
+
+html, body { /* Toute la page */
+margin: 0;
+padding: 0; 
+}
+body { /* CSS du body */
+background-color: #e8eaf1; 
+font-family: Verdana, sans-serif; 
+font-size: 100%;
+}
+
+/*          CSS MARGES et PADDING            */
+.Div1 {
+background-color: #dadce4;
+
+margin-top: 5px;
+margin-bottom: 5px;
+margin-left: 5px;
+margin-right: 5px;
+
+padding-top: 0.5%;
+padding-bottom: 0.5%;
+padding-left: 1%;
+padding-right: 1%;
+
+border-style: double ;
+}
+
+
+/*          CSS TITRES et TEXTES            */
+
+h1 { /* Titre 1 */
+font-size: 2;
+}
+h2 { /* Titre 2 */
+font-size: 3;
+}
+h3 { /* Titre 3 */
+font-size: 4;
+}
+h4 { /* Titre 4 */
+font-size: 5;
+}
+h5 { /* Titre 5 */
+font-size: 6;
+}
+h6 { /* Titre 6 */
+font-size: 7;
+}
+
+p { /* Paragraphe */
+color: black; 
+}
+
+.Underline {
+text-decoration: underline;
+}
+
+/* CSS Spécifique PHP */
+
+.Div_PHP_Color_0 { /* Null */
+background-color: black; 
+}
+.Div_PHP_Color_1 { /* Impaire */
+background-color: red; 
+}
+.Div_PHP_Color_2 { /* Paire */
+background-color: blue; 
+}
+
+/*          CSS FLEXBOX            */ /* (Et autres classe concernant le Menu) */ /* */
+
+.Menu-Nav ul { /* S'applique sur la liste, et le menu donc */
+margin: 0px;
+padding: 0px;
+background: #0D1F2D;
+list-style:none;
+} 
+
+.Menu-Nav .Menu {
+display: flex;
+flex-direction : row;
+justify-content: center;
+}
+
+                                        /* ATTENTION : SOUS-MENU */
+
+/*          CSS COULEURS            */
+
+.Rouge { /*Couleur ROUGE */
+color: red;
+}
+.Bleu { /*Couleur BLEU */
+color: blue;
+}
+.Jaune { /*Couleur JAUNE */
+color: yellow;
+}
+.Noir { /*Couleur NOIR */
+color: black;
+}
+.Blanc { /*Couleur BLANC */
+color: white;
+}
+.Vert { /*Couleur VERT */
+color: green;
+}
+.Cyan { /*Couleur CYAN */
+color: cyan;
+}
+
+/*          CSS PLACEMENTS            */
+
+.TC { /*CSS Texte Centré*/
+text-align: center;
+}
+.TG { /*CSS texte à Gauche*/
+text-align: left;
+}
+.TD { /*CSS texte à Droite*/
+text-align: right;
+}
