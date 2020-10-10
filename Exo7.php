@@ -33,38 +33,30 @@ $EXO = 'Exo7';
             <h1 class="TC"><?php echo "$EXO" ?></h1>
         </div>
         <div class="Div1">
-        <form class="" action="" method="GET">
+            <p><form class="" action="" method="POST">
                 Texte : <input type="text" name="Texte">
-                <input type="submit" name="Envoyer">
-            </form>
+                <input type="submit" name="Envoyer" onclick="document.location.reload(false)">
+            </p></form>
             <?php
                 session_start();
-                if (isset($_SESSION['Texte'])) {
+                if (isset($_SESSION['Texte'])){
                     $Texte = $_SESSION['Texte'];
                     echo '</div><div class="Div1"><p>Le texte écrit est : '.$Texte.'</p>';
                 }
                 else{
-                    if(isset($_GET['Texte'])){
-                        $_SESSION['Texte'] = $_GET['Texte'];
+                    if(isset($_POST['Texte'])){
+                        $_SESSION['Texte'] = $_POST['Texte'];
+                        $Texte = $_SESSION['Texte'];
+                        echo '</div><div class="Div1"><p>Le texte écrit est : '.$Texte.'</p>';
+                    }
+                    else{
+                        echo '</div><div class="Div1"><p>Il n\'y a pas encore de texte.</p>';
                     }
                 }
             ?>
         </div>
         <div class="Div1">
-            <button id="refresh" onclick="document.location.reload(false)">Cliquez ici pour Rafraichir la page.</button>
-            <button id="refresh" action="<?php session_destroy('Text') ?>">Cliquez ici pour Supprimer les valeurs de la session.</button>
-
-    <!-- Code à revérifier et faire fonctionner
-
-            if (isset($_POST['EFFACER'])) {
-unset ($_SESSION['Texte']);
-}
-<form method="post" action="">
-    <input type="submit" value="Effacer" name="EFFACER">
-</form>
-
-    -->
-
+            <button id="Refresh" onclick="window.location.reload(false)">Cliquez ici pour Rafraichir la page.</button>
         </div>
     </body>
 
