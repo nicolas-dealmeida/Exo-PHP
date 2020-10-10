@@ -26,14 +26,11 @@
             <h1 class="TC">Accueil</h1>
         </div>
         <div class="Div1">
-            <p>Exo 1 : <a href="Exo1.php">Lien</a></p>
-            <p>Exo 2 : <a href="Exo2.php">Lien</a></p>
-            <p>Exo 3 : <a href="Exo3.php">Lien</a></p>
-            <p>Exo 4 : <a href="Exo4.php">Lien</a></p>
-            <p>Exo 5 : <a href="Exo5.php">Lien</a></p>
-            <p>Exo 6 : <a href="Exo6.php">Lien</a></p>
-            <p>Exo 7 : <a href="Exo7.php">Lien</a></p>
-            <p>Exo 8 : <a href="Exo8.php">Lien</a></p>
+            <?php
+                for($n=1;$n<9;$n++){
+                    echo "<p>Exo $n : <a href='Exo$n.php'>Lien</a></p>";
+                }
+            ?>
         </div>
     </body>
 
