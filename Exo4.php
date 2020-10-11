@@ -66,8 +66,8 @@ $EXO = 'Exo4';
                     }
                 if($Delta==0){
                     echo '<p>Delta ('.$Delta.') est égal à 0, il y a donc une solution réel à l\'équation.</p>';
-                    $Solution = (-$B/2*$A);
-                    echo '<p>La solution réel à l\'équation est '.$Solution.'</p>';
+                    $Solution0 = (-$B/2*$A);
+                    echo '<p>La solution réel à l\'équation est '.$Solution0.'</p>';
                     }
                 if($Delta<0){
                     echo '<p>Delta ('.$Delta.') est inférieur à 0, il n\'y a donc pas de solution réel à l\'équation.</p>';
