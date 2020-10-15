@@ -116,12 +116,12 @@ color: blueviolet;
 
 /*          CSS PLACEMENTS            */
 
-.TC { /*CSS Texte Centré*/
+.TC { /*CSS Texte Centré */
 text-align: center;
 }
-.TG { /*CSS texte à Gauche*/
+.TG { /*CSS texte à Gauche */
 text-align: left;
 }
-.TD { /*CSS texte à Droite*/
+.TD { /*CSS texte à Droite */
 text-align: right;
 }
