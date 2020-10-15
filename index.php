@@ -28,7 +28,14 @@
         <div class="Div1">
             <?php
                 for($n=1;$n<9;$n++){
-                    echo "<p>Exo $n : <a href='Exo$n.php'>Lien</a></p>";
+                    echo "<p class='Vert<!-- Commentai'>TP1 Exo $n : <a href='Exo$n.php'>Lien</a></p>";
+                }
+            ?>
+        </div>
+        <div class="Div1">
+            <?php
+                for($n=1;$n<5;$n++){
+                    echo "<p class='Bleu'>TP2 Exo $n : <a href='Exo$n.php'>Lien</a></p>";
                 }
             ?>
         </div>
