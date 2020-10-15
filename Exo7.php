@@ -39,20 +39,13 @@ $EXO = 'Exo7';
             </p></form>
             <?php
                 session_start();
-                if (isset($_SESSION['Texte'])){
-                    $Texte = $_SESSION['Texte'];
-                    echo '</div><div class="Div1"><p>Le texte écrit est : '.$Texte.'</p>';
-                }
-                else{
                     if(isset($_POST['Texte'])){
-                        $_SESSION['Texte'] = $_POST['Texte'];
-                        $Texte = $_SESSION['Texte'];
+                        $Texte = $_POST['Texte'];
                         echo '</div><div class="Div1"><p>Le texte écrit est : '.$Texte.'</p>';
                     }
                     else{
                         echo '</div><div class="Div1"><p>Il n\'y a pas encore de texte.</p>';
                     }
-                }
             ?>
         </div>
         <div class="Div1">

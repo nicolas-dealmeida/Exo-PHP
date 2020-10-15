@@ -39,18 +39,18 @@ $EXO = 'Exo8';
             </p></form>
             <?php
                 session_start();
-                if (isset($_POST['Texte1']) == "T8qw.Q?R2AU9@pa|9_dE2p~2|5Gqb4" ){
+                if (isset($_POST['Delet'])){
                     unset($_SESSION['Texte1']);
                     echo '</div><div class="Div1"><p>DESTROY</p>';
                 }
                 else{
-                    if (isset($_SESSION['Texte1'])){
+                    if(isset($_POST['Texte1'])){
+                        $_SESSION['Texte1'] = $_POST['Texte1'];
                         $Texte1 = $_SESSION['Texte1'];
                         echo '</div><div class="Div1"><p>Le texte écrit est : '.$Texte1.'</p>';
                     }
                     else{
-                        if(isset($_POST['Texte1'])){
-                            $_SESSION['Texte1'] = $_POST['Texte1'];
+                        if (isset($_SESSION['Texte1'])){
                             $Texte1 = $_SESSION['Texte1'];
                             echo '</div><div class="Div1"><p>Le texte écrit est : '.$Texte1.'</p>';
                         }
@@ -62,8 +62,10 @@ $EXO = 'Exo8';
             ?>
         </div>
         <div class="Div1">
-            <button id="Refresh" onclick="window.location.reload(false)">Cliquez ici pour Rafraichir la page.</button>
-            <button method="POST" type="submit" name="Texte1" value="T8qw.Q?R2AU9@pa|9_dE2p~2|5Gqb4">Supprimer le texte.</button>
+            <form class="" action="" method="POST">
+                <button id="Refresh" onclick="window.location.reload(false)">Cliquez ici pour Rafraichir la page.</button>
+                <button type="submit" name="Delet" onclick="window.location.reload(false)">Supprimer le texte.</button>
+            </form>
         </div>
     </body>
 
