@@ -1,7 +1,7 @@
 <!-- Déclaration des Variables PHP -->
 
 <?php
-$EXO = 'TP2 - Exo 1';
+$EXO = 'TP2 - Exo 2';
 
 ?>
 
@@ -27,10 +27,6 @@ $EXO = 'TP2 - Exo 1';
     </header>
     <!-- Fin Header / Menu -->
 
-    <php
-    include('FONCTIONS.php');
-    ?>
-
     <!-- body -->
     <body>
         <div>
@@ -40,7 +36,6 @@ $EXO = 'TP2 - Exo 1';
 
         </div>
     </body>
-
 
     <footer>
         <div class="Div1">
