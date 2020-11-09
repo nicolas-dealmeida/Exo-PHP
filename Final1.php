@@ -1,7 +1,7 @@
 <!-- Déclaration des Variables PHP -->
 
 <?php
-$EXO = 'Exo8';
+$EXO = 'Exo Final 1';
 
 ?>
 
