@@ -15,7 +15,7 @@ Function TABLEAU1() {
                 <tr>
                     <td>VA 1</td>
                     <td>VB 1</td>
-                    <td>VC 1<br></td>
+                    <td>VC 1</td>
                 </tr>
                 <tr>
                     <td>VA 2</td>
@@ -25,6 +25,48 @@ Function TABLEAU1() {
             </tbody>
         </table>
     ';
+};
+
+if(isset($Entete1)) {
+    $C = $_POST['C'];
 }
+
+// TABLEAU 2
+Function TABLEAU2($Entete1,$Entete2,$Entete3) {
+    echo '
+        <table>
+            <thead>
+                <tr>
+                    <th>';
+    if(isset($Entete1)) {
+        echo $Entete1;
+    };
+    echo '</th><th>';
+    if(isset($Entete2)) {
+        echo $Entete2;
+    };
+    echo '</th><th>';
+    if(isset($Entete3)) {
+        echo $Entete3;
+    };
+    echo '
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>VA 1</td>
+                    <td>VB 1</td>
+                    <td>VC 1</td>
+                </tr>
+                <tr>
+                    <td>VA 2</td>
+                    <td>VB 2</td>
+                    <td>VC 2</td>
+                </tr>
+            </tbody>
+        </table>
+    ';
+};
 
 ?>

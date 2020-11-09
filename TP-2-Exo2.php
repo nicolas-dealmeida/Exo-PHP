@@ -27,15 +27,25 @@ $EXO = 'TP2 - Exo 2';
     </header>
     <!-- Fin Header / Menu -->
 
+    <?php include('Function.php') ?> <!-- Include des fonctions -->
+
+
+
     <!-- body -->
     <body>
         <div>
             <h1 class="TC"><?php echo "$EXO" ?></h1>
         </div>
         <div class="Div1">
-
+            <?php
+                $Entete1 = 'Para1'; // Définition de Variable
+                $Entete2 = 'Para2'; // Définition de Variable
+                $Entete3 = 'Para3'; // Définition de Variable
+                TABLEAU2($Entete1,$Entete2,$Entete3); // Invocation du Tableau 2.
+            ?>
         </div>
     </body>
+
 
     <footer>
         <div class="Div1">
