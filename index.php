@@ -35,7 +35,7 @@
         </div>
         <div class="Div1">
             <?php
-                for($n=1;$n<5;$n++){
+                for($n=1;$n<4;$n++){
                     echo "<p class='Bleu'>TP2 Exo $n : <a href='TP-2-Exo$n.php'>Lien</a></p>";
                 }
             ?>
