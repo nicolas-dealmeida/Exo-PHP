@@ -27,13 +27,21 @@ $EXO = 'TP2 - Exo 3';
     </header>
     <!-- Fin Header / Menu -->
 
+            <?php include('Function.php') ?> <!-- Include des fonctions -->
+
     <!-- body -->
     <body>
         <div>
             <h1 class="TC"><?php echo "$EXO" ?></h1>
         </div>
         <div class="Div1">
-
+            <?php
+                    $VA1 = '15'; // Définition de Variable
+                    $VA2 = '30'; // Définition de Variable
+                    $VA3 = '45'; // Définition de Variable
+                    $MOYENNE = Moyenne($VA1,$VA2,$VA3); // Définition de $MOYENNE via ma Fonction Moyenne.
+                    TABLEAU3($VA1,$VA2,$VA3,$MOYENNE); // Invocation du Tableau 3.
+            ?>
         </div>
     </body>
 

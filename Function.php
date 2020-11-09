@@ -1,8 +1,22 @@
 <?php
 
+
+Function Moyenne() // Fonction permetant de calculer une moyenne avec PHP. Source : http://www.zone-webmasters.net/codes-sources/php/48-calculer-une-moyenne.html
+{ 
+	$Nombres = func_get_args(); 
+	$Nb = sizeof($Nombres);
+	$Somme = 0; 
+	foreach ($Nombres as $Valeur)
+	{ 
+		$Somme += $Valeur; 
+	} 
+	return ($Somme / $Nb); 
+} 
+
+
 // TABLEAU 1
 Function TABLEAU1() {
-    Echo '
+    echo '
         <table>
             <thead>
                 <tr>
@@ -30,6 +44,7 @@ Function TABLEAU1() {
 if(isset($Entete1)) {
     $C = $_POST['C'];
 }
+
 
 // TABLEAU 2
 Function TABLEAU2($Entete1,$Entete2,$Entete3) {
@@ -68,5 +83,45 @@ Function TABLEAU2($Entete1,$Entete2,$Entete3) {
         </table>
     ';
 };
+
+
+// TABLEAU 3
+Function TABLEAU3($VA1,$VA2,$VA3,$MOYENNE) {
+    echo '
+        <table>
+            <thead>
+                <tr>
+                    <th>Valeurs :</th>
+                    <th>
+        ';
+    echo $VA1;
+    echo '
+                    </th>
+                    <th>
+        ';
+    echo $VA2;
+    echo '
+                    </th>
+                    <th>
+        ';
+    echo $VA3;
+    echo '
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Moyenne :</td>
+                    <td colspan="3">
+        ';
+    echo $MOYENNE;
+    echo '
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    ';
+};
+
 
 ?>
