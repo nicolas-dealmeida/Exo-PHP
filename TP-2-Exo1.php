@@ -27,9 +27,9 @@ $EXO = 'TP2 - Exo 1';
     </header>
     <!-- Fin Header / Menu -->
 
-    <php
-    include('FONCTIONS.php');
-    ?>
+    <?php include('Function.php') ?> <!-- Include des fonctions -->
+
+
 
     <!-- body -->
     <body>
@@ -37,7 +37,9 @@ $EXO = 'TP2 - Exo 1';
             <h1 class="TC"><?php echo "$EXO" ?></h1>
         </div>
         <div class="Div1">
-
+            <?php
+                TABLEAU1(); // Invocation du Tableau 1.
+            ?>
         </div>
     </body>
 
@@ -50,4 +52,9 @@ $EXO = 'TP2 - Exo 1';
             highlight_file(__FILE__)?>
         </div>
     </footer>
+    <div class="Div1">
+            <?php
+                TABLEAU1(); // Invocation du Tableau 1.
+            ?>
+    </div>
 </html>
