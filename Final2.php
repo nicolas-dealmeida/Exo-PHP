@@ -27,16 +27,36 @@ $EXO = 'Exo Final 2';
     </header>
     <!-- Fin Header / Menu -->
 
+        <?php include('Function.php') ?> <!-- Include des fonctions -->
+
     <!-- body -->
     <body>
         <div>
             <h1 class="TC"><?php echo "$EXO" ?></h1>
         </div>
-        <div class="Div1">
 
+        <div class="Div1"> <!-- Formulaire -->
+
+            <!-- PHP -->
+            <?php
+                if (isset($_POST['MDP'])) {
+                    $MDP = $_POST['MDP'] ;
+                }
+                else {
+                    $MDP = '-!-NEUTRE-!-' ;
+                }
+                FORMFINAL($MDP,1234);
+            ?>
         </div>
-    </body>
 
+        <!-- Divers pour les Test -->
+        <div class="Div1">
+            <form class="" action="" method="POST">
+                <button id="Refresh" onclick="window.location.reload(false)">Cliquez ici pour Rafraichir la page.</button>
+            </form>
+        </div>
+
+    </body>
 
     <footer>
         <div class="Div1">
