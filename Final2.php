@@ -40,12 +40,11 @@ $EXO = 'Exo Final 2';
             <!-- PHP -->
             <?php
                 if (isset($_POST['MDP'])) {
-                    $MDP = $_POST['MDP'] ;
                 }
                 else {
-                    $MDP = '-!-NEUTRE-!-' ;
+                    $_POST['MDP'] = '-!-NEUTRE-!-' ;
                 }
-                FORMFINAL($MDP,1234);
+                FORMFINAL($_POST['MDP'],1234);
             ?>
         </div>
 

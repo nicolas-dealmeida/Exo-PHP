@@ -127,37 +127,44 @@ Function TABLEAU3($VA1,$VA2,$VA3,$MOYENNE) {
 // Formulaire Final
 Function FORMFINAL($MDP,$VERIF_MDP) {
 
-    //session_start() ;
+    session_start() ;
 
     if (isset($_SESSION['VERIF'])) { // Si Session VERIF True, alors met directement le Lien Secret.
-        if($_SESSION['VERIF'] = TRUE) { 
+        if($_SESSION['VERIF'] == TRUE) { 
             echo '<p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox">Lien Secret</a>';
             return ; // !!! - Met fin au process - !!!
         }
     }
 
     if (isset($_POST['MDP'])) { // Si post MDP.
-        if ($_POST['MDP'] = $VERIF_MDP) {
+        if ($_POST['MDP'] == $VERIF_MDP) {
             $_SESSION['VERIF'] = TRUE ;
             echo '<p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox">Lien Secret</a>';
             return ; // !!! - Met fin au process - !!!
         }
-        if ($_POST['MDP'] = '-!-NEUTRE-!-') {
+        if ($_POST['MDP'] == '-!-NEUTRE-!-') { // Si post MDP = '-!-NEUTRE-!-' (Défaut).
+            echo "
+            <form method='POST'>
+                <table>
+                    <tr><td><p>Mots de Passe :</p></td><td><p><input type='text' name='MDP'></p></td></tr>
+                    <tr><td><p><input type='submit' name='Envoyer'></p></td></tr>
+                </table>
+            </form>
+            ";
+            return ; // !!! - Met fin au process - !!!
         }
         else{
-            echo "<p>Le MDP est Incorrect." ;
+            echo "<p>Le MDP est Incorrect.</p>" ;
+            echo "
+            <form method='POST'>
+                <table>
+                    <tr><td><p>Mots de Passe :</p></td><td><p><input type='text' name='MDP'></p></td></tr>
+                    <tr><td><p><input type='submit' name='Envoyer'></p></td></tr>
+                </table>
+            </form>
+            ";
+            return ; // !!! - Met fin au process - !!!
         }
-    }
-    else { // Si pas de post MDP ou si MDP faux, Affiche le Form.
-        echo "
-        <form method='POST'>
-            <table>
-                <tr><td><p>Mots de Passe :</p></td><td><p><input type='text' name='MDP'></p></td></tr>
-                <tr><td><p><input type='submit' name='Envoyer'></p></td></tr>
-            </table>
-        </form>
-        ";
-        return ; // !!! - Met fin au process - !!!
     }
 }
 ?>
