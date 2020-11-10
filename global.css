@@ -70,22 +70,126 @@ background-color: red;
 background-color: blue; 
 }
 
-/*          CSS FLEXBOX            */ /* (Et autres classe concernant le Menu) */ /* */
 
-.Menu-Nav ul { /* S'applique sur la liste, et le menu donc */
-margin: 0px;
-padding: 0px;
-background: #0D1F2D;
-list-style:none;
+/*          CSS MENU            */
+
+.Menu-Nav ul { /* S'applique sur la liste */
+    margin: 0px;
+    padding: 0px;
+    background: #0D1F2D;
+    list-style:none;
 } 
 
-.Menu-Nav .Menu {
-display: flex;
-flex-direction : row;
-justify-content: center;
+.Menu-Nav a { /* S'applique sur les liens dans le menu */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    display: block;
+    text-align:center;
+    text-decoration: none;
+    color: #EEEEEE;
+    font-size: 22px;
 }
 
-                                        /* ATTENTION : SOUS-MENU */
+.Menu a:hover { /*CSS des liens lors du survole du curseur */
+    text-decoration: underline white;
+}
+
+.Menu-Nav .Menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.40);
+}
+
+
+                                    /* ATTENTION : SOUS-MENU */
+
+.Sous-Menu-1 { 
+    position: relative;
+}
+
+.Sous-Menu-1:hover > .Sous-Menu-2a { /* Active le sous menu lors du survole*/
+    display: flex;
+}
+.Sous-Menu-1:hover > .Sous-Menu-2b { /* Active le sous menu lors du survole*/
+    display: flex;
+}
+.Sous-Menu-1:active > .Sous-Menu-2a { /* Active le sous menu lors du survole*/
+    display: flex;
+}
+.Sous-Menu-1:active > .Sous-Menu-2b { /* Active le sous menu lors du survole*/
+    display: flex;
+}
+
+.Sous-Menu-2a { /* Sous Menu Pies */
+    display: none ; 
+    flex-flow: column wrap;
+    min-width: 205px;
+    position: absolute;
+}
+.Sous-Menu-2b { /* Sous Menu CV */
+    display: none ; 
+    flex-flow: column wrap;
+    min-width: 205px;
+    position: absolute;
+}
+
+.Sous-Menu-2a.is-active { /* Active le sous menu lors du survole*/
+    display: flex;
+}
+.Sous-Menu-2b.is-active { /* Active le sous menu lors du survole */
+    display: flex;
+}
+
+.Sous-Menu-2a a {
+    text-align: left;
+}
+.Sous-Menu-2b a {
+    text-align: left;
+}
+
+
+/*          CSS MEDIA            */
+
+@media (max-width: 480px) { /* Si Ecran trop petit (Donc téléphone, etc) */
+    .Menu-Nav a { /* Menu */
+        font-size: 14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .Sous-Menu-2b.is-active { /* Désactive le sous menu */
+        display: none;
+    }
+    .Sous-Menu-2a.is-active { /* Désactive le sous menu */
+        display: none;
+    }
+    /*.FlexR { Passage de FlexR en RW et non en R 
+        flex-flow: row wrap!important;
+    }*/
+    h1 { /* Titre 1 */
+        font-size: x-large;
+    }
+    h2 { /* Titre 2 */
+        font-size: large;
+    }
+    h3 { /* Titre 3 */
+        font-size: medium;
+    }
+    h4 { /* Titre 4 */
+        font-size: small;
+    }
+    h5 { /* Titre 5 */
+        font-size: x-small;
+    }
+    h6 { /* Titre 6 */
+        font-size: xx-small;
+    }
+}
 
 /*          CSS COULEURS            */
 
