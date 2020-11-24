@@ -41,6 +41,11 @@
             ?>
             <p class='Bleu'>TP2 Final : <a href='Final2.php'>Lien</a></p>
         </div>
+
+        <div class="Div1">
+            <p class='Violet'>Test PHP PDO : <a href='TestPDO.php'>Lien</a></p>
+        </div>
+
     </body>
 
     <footer>
